@@ -1,0 +1,26 @@
+{% extends 'resizer/base.html' %}
+
+{% block content %}
+    <a href="/">Назад к списку</a>
+    <h1>{{ image.name }}</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <p>
+            <label>Ширина</label><br>
+            <input type="number" name="width">
+        </p>
+        <p>
+            <label>Высота</label><br>
+            <input type="number" name="height">
+        </p>
+        {{ form.non_field_errors }}
+        <p>
+            <button type="submit">Отправить</button>
+        </p>
+        {% if new_image %}
+            <img src="data:image/png;base64,{{ new_image }}">
+        {% else %}
+            <img src="{{ image.image.url }}">
+        {% endif %}
+    </form>
+{% endblock %}
