@@ -9,7 +9,7 @@
 1. Перейдите в папку проекта:
 
     ```code
-    cd PATH/TO/PROJECT/image_resizer
+    cd idaproject_test
     ```
 
 1. Выполните команду для создания виртуального окружения:
