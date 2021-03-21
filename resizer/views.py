@@ -26,7 +26,10 @@ def upload_file(request: HttpRequest) -> HttpResponse:
 
 
 def resize_image(request: HttpRequest, image_id: int) -> HttpResponse:
-    img = Image.objects.get(id=image_id)
+    try:
+        img = Image.objects.get(id=image_id)
+    except Image.DoesNotExist:
+        return redirect('home')
 
     if request.method == 'POST':
         form = ResizeImageForm(request.POST)

@@ -33,7 +33,6 @@
 1. Проведите миграции БД при помощи команды:
 
     ```code
-    python manage.py makemigrations resizer
     python manage.py migrate resizer
     ```
 
@@ -43,4 +42,4 @@
     python manage.py runserver 8000
     ```
 
-1. Перейдите на страницу http://127.0.0.1:8000/ (или ваш собственный порт)
+1. Перейдите на страницу <http://127.0.0.1:8000/> (или ваш собственный порт)
