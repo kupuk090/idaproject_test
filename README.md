@@ -2,6 +2,10 @@
 
 1. Склонируйте к себе данный репо при помощи команды:
 
+    ```code
+    git clone https://github.com/kupuk090/idaproject_test.git
+    ```
+
 1. Перейдите в папку проекта:
 
     ```code
